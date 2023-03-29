@@ -1132,7 +1132,7 @@ int x86_reg_write(struct uc_struct *uc, unsigned int *regs, void *const *vals, i
                     case UC_X86_REG_MXCSR:
                         cpu_set_mxcsr(&X86_CPU(uc, mycpu)->env, *(uint32_t *)value);
                         break;
-                        /*
+                        // /*
                     // Don't think base registers are a "thing" on x86
                     case UC_X86_REG_FS_BASE: 
                         X86_CPU(uc, mycpu)->env.segs[R_FS].base = *(uint32_t *)value;
@@ -1140,7 +1140,7 @@ int x86_reg_write(struct uc_struct *uc, unsigned int *regs, void *const *vals, i
                     case UC_X86_REG_GS_BASE:
                         X86_CPU(uc, mycpu)->env.segs[R_GS].base = *(uint32_t *)value;
                         continue;
-                        */
+                        // */
                 }
                 break;
 
